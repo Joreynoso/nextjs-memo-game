@@ -108,11 +108,8 @@ nextjs-memo-game/
 - [ ] Sistema de puntuación
 - [ ] Diferentes niveles de dificultad
 - [ ] Tabla de clasificación global
-- [ ] Temporizador de juego
 - [ ] Efectos de sonido
 - [ ] Animaciones mejoradas
-- [ ] Modo multijugador
-- [ ] Temas personalizables
 
 ## 🤝 Contribuciones
 
