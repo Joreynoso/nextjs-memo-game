@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🃏 Memory Card Game
 
-## Getting Started
+> Un juego de memoria interactivo construido con Next.js que desafía tu capacidad de recordar pares de emojis
 
-First, run the development server:
+## 🚧 Estado del Proyecto
+
+**En Desarrollo Activo** - Este proyecto está actualmente en construcción. Nuevas características y mejoras se están implementando regularmente.
+
+## 📋 Descripción
+
+Memory Card Game es una aplicación web moderna que combina el clásico juego de memoria con tecnologías web de última generación. Los jugadores deben encontrar pares de cartas con emojis idénticos, poniendo a prueba su memoria y concentración.
+
+## ✨ Características
+
+- 🎮 Interfaz de usuario intuitiva y responsiva
+- 🔐 Sistema de autenticación seguro con Kinde Auth
+- 🎨 Emojis dinámicos obtenidos de la API externa EmojiHub
+- 📊 Persistencia de datos con Prisma ORM y Supabase
+- ⚡ Renderizado optimizado con Next.js 14
+- 🎯 Uso de HTML entities para representación de emojis
+
+## 🛠️ Stack Tecnológico
+
+### Frontend
+- **Next.js 14** - Framework React con App Router
+- **React** - Biblioteca de UI
+- **HTML Entities** - Renderizado de caracteres especiales
+
+### Backend & Base de Datos
+- **Prisma ORM** - Object-Relational Mapping
+- **Supabase** - Base de datos PostgreSQL en la nube
+- **Kinde Auth** - Autenticación y gestión de usuarios
+
+### APIs Externas
+- **EmojiHub API** - Proveedor de emojis aleatorios
+
+## 📦 Instalación
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/nextjs-memo-game.git
+
+# Navegar al directorio
+cd nextjs-memo-game
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Configuración
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Database
+DATABASE_URL="postgresql://..."
 
-## Learn More
+# Kinde Auth
+KINDE_CLIENT_ID="..."
+KINDE_CLIENT_SECRET="..."
+KINDE_ISSUER_URL="..."
+KINDE_SITE_URL="..."
+KINDE_POST_LOGOUT_REDIRECT_URL="..."
+KINDE_POST_LOGIN_REDIRECT_URL="..."
 
-To learn more about Next.js, take a look at the following resources:
+# Next.js
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Uso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Sincronizar base de datos con Prisma
+npx prisma db push
 
-## Deploy on Vercel
+# Generar cliente de Prisma
+npx prisma generate
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Ejecutar en modo desarrollo
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Construir para producción
+npm run build
+
+# Iniciar servidor de producción
+npm start
+```
+
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000)
+
+## 📁 Estructura del Proyecto
+
+```
+nextjs-memo-game/
+├── app/                # App Router de Next.js
+├── components/         # Componentes React reutilizables
+├── prisma/            # Esquema y migraciones de Prisma
+├── public/            # Archivos estáticos
+├── lib/               # Utilidades y configuraciones
+└── .env               # Variables de entorno (no incluido en git)
+```
+
+## 🎯 Roadmap
+
+- [ ] Sistema de puntuación
+- [ ] Diferentes niveles de dificultad
+- [ ] Tabla de clasificación global
+- [ ] Temporizador de juego
+- [ ] Efectos de sonido
+- [ ] Animaciones mejoradas
+- [ ] Modo multijugador
+- [ ] Temas personalizables
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 📧 Contacto
+
+Tu Nombre - [@tu_usuario](https://twitter.com/tu_usuario)
+
+Link del Proyecto: [https://github.com/tu-usuario/nextjs-memo-game](https://github.com/tu-usuario/nextjs-memo-game)
+
+## 🙏 Agradecimientos
+
+- [EmojiHub](https://github.com/cheatsnake/emojihub) - API de emojis
+- [Kinde](https://kinde.com) - Solución de autenticación
+- [Supabase](https://supabase.com) - Backend as a Service
+- [Prisma](https://www.prisma.io) - ORM de próxima generación
+- [Next.js](https://nextjs.org) - Framework React
+
+---
+
+⭐ Si este proyecto te resulta útil, considera darle una estrella en GitHub
